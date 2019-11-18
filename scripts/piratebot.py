@@ -15,13 +15,13 @@ class PirateRobot(object):
         if vel > 0:
             self.left_motor.forward(vel)
         else:
-            self.left_motor.backward(vel)
+            self.left_motor.backward(abs(vel))
     
     def right(self, vel):
         if vel > 0:
             self.right_motor.forward(vel)
         else:
-            self.right_motor.backward(vel)
+            self.right_motor.backward(abs(vel))
     
     def drive(self, linear, angular):
         # differential drive 
