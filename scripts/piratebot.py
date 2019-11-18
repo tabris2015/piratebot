@@ -25,8 +25,8 @@ class PirateRobot(object):
     
     def drive(self, linear, angular):
         # differential drive 
-        left_vel = (linear + angular) / 2
-        right_vel = (linear - angular) / 2
+        left_vel = (linear - angular) / 2
+        right_vel = (linear + angular) / 2
 
         self.left(left_vel)
         self.right(right_vel)
