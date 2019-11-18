@@ -23,6 +23,7 @@ class PirateControl:
         #control manual de velocidad con el joystick
         linear = msg.linear.x
         angular = msg.angular.z
+        print("linear: {} , angular: {}".format(linear, angular))
         self.robot.drive(linear, angular)
 
 def main(args):
