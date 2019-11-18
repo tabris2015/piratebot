@@ -17,7 +17,6 @@ class PirateControl:
         print("Inicializando hardware...")
         self.robot = PirateRobot()
         print('creando subs y pubs...')
-        self.joy_sub = rospy.Subscriber(self.joy_topic, Joy, self.joyCallback, queue_size=1)
         self.twist_sub = rospy.Publisher(self.twist_topic, Twist, self.twistCallback, queue_size=1)
         
     def twistCallback(self, msg):
