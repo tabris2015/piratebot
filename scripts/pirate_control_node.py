@@ -17,7 +17,7 @@ class PirateControl:
         print("Inicializando hardware...")
         self.robot = PirateRobot()
         print('creando subs y pubs...')
-        self.twist_sub = rospy.Publisher(self.twist_topic, Twist, self.twistCallback, queue_size=1)
+        self.twist_sub = rospy.Subscriber(self.twist_topic, Twist, self.twistCallback, queue_size=1)
         
     def twistCallback(self, msg):
         #control manual de velocidad con el joystick
