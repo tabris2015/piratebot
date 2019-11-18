@@ -2,11 +2,8 @@ from gpiozero import Motor
 
 class PirateRobot(object):
     # pins for control
-    #               (FW, BW)
-    left_pins =     (27, 22)
-    right_pins =    (23, 24)
-    
-    def __init__(self, lpins, rpins):
+    #                        (FW, BW)
+    def __init__(self, lpins=(27, 22), rpins=(23,24)):
         # pines
         self.left_pins = lpins
         self.right_pins = rpins
