@@ -4,7 +4,7 @@
     <!-- init hardware control -->
     <node pkg="piratebot" type="pirate_control_node.py" name="pirate_control_node" />
     <!-- rplidar node -->
-    <include file="$(find rplidar_ros)/launch/mapping_default.launch" />
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
     <!-- hector slam stuff  -->
     <include file="$(find hector_mapping)/launch/mapping_default.launch" />
 
