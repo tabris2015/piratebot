@@ -48,14 +48,14 @@ TeleopRobocar::TeleopRobocar()
         freq_hz_ = 20;
     }
 
-    nh_.param<int>("axis_linear", linear_, 5);
+    nh_.param<int>("axis_linear", linear_, 1);
     nh_.param<int>("axis_brake", brake_, 2);
-    nh_.param<double>("scale_linear", l_scale_, -0.5);
-    nh_.param<double>("offset_linear", l_offset_, 0.5);
+    nh_.param<double>("scale_linear", l_scale_, 0);
+    nh_.param<double>("offset_linear", l_offset_, 0);
 
-    nh_.param<int>("axis_angular", angular_, 0);
+    nh_.param<int>("axis_angular", angular_, 3);
 
-    nh_.param<double>("scale_angular", a_scale_, -1.32);    // -0.34
+    nh_.param<double>("scale_angular", a_scale_, 1);    // -0.34
 
     nh_.param<std::string>("output_topic", output_topic, "/cmd_vel");
 
