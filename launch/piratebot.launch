@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <!-- init hardware control -->
+    <node pkg="piratebot" type="pirate_control_node.py" name="pirate_control_node" />
+    <!-- rplidar node -->
+    <include file="$(find rplidar_ros)/launch/mapping_default.launch" />
+    <!-- hector slam stuff  -->
+    <include file="$(find hector_mapping)/launch/mapping_default.launch" />
+
+    <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch">
+        <arg name="trajectory_source_frame_name" value="scanmatcher_frame" />
+        <arg name="map_file_path" value="$(arg geotiff_map_file_path)" />
+    </include>
+
+</launch>
